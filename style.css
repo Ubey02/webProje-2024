@@ -1,0 +1,22 @@
+ .arkaPlan{
+    width: 100%;
+    height: 100px;
+    background: rgb(77, 77, 160);
+}
+
+.butonlar{
+    display: flex;
+   
+    background-color: white;
+    width: 150px;
+    height: 50px;
+    margin-left: 100px;
+    margin-inline-start: 50px;
+}
+
+.butonlar button {
+    margin: 20px; /* Butonlar arasında ortalama bir boşluk bırak */
+    background-color: transparent; /* Butonun arka planını şeffaf yap */
+    color: white; /* Buton metin rengi */
+}
+
