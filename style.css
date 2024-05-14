@@ -1,22 +1,110 @@
- .arkaPlan{
-    width: 100%;
-    height: 100px;
-    background: rgb(77, 77, 160);
+/* Giriş sayfasının özellikleri*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-.butonlar{
-    display: flex;
-   
-    background-color: white;
-    width: 150px;
-    height: 50px;
-    margin-left: 100px;
-    margin-inline-start: 50px;
+body{
+display: grid;
+height: 100vh;
+place-items: center;
+background: linear-gradient(to left, #5500ff 0%, #520082 100%);
+
+}
+.container{
+  background: #fff;
+  max-width: 500px;
+  width: 100%;
+  padding: 55px 60px;
+  border-radius: 5px;
+  position: relative;
 }
 
-.butonlar button {
-    margin: 20px; /* Butonlar arasında ortalama bir boşluk bırak */
-    background-color: transparent; /* Butonun arka planını şeffaf yap */
-    color: white; /* Buton metin rengi */
+.container .logo img{
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  left: 78%;
+  top: 5px;
+  border-radius: 50%;
+  border: 5px solid #4a59FF;
 }
 
+.container form .title{
+  font-size: 30px;
+  font-weight: 600;
+  margin: 20px 0 10px 0;
+  position: relative;
+}
+
+.container form .title::before{
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 33px;
+  bottom: 2px;
+  left: 0;
+  border-radius: 50px;
+  background: #9434cb;
+}
+/* Navbarın özellikleri
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #00b46a;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.nav-links li a:hover {
+  background-color: #00a056;
+}
+
+.user-section {
+  display: flex;
+}
+
+.user-section a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.user-section a:hover {
+  background-color: #00a056;
+}
+*/
