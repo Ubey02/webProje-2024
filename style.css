@@ -29,7 +29,7 @@ background: linear-gradient(to left, #5500ff 0%, #520082 100%);
   left: 78%;
   top: 5px;
   border-radius: 50%;
-  border: 5px solid #4a59FF;
+  border: 5px solid #5500ff;
 }
 
 .container form .title{
@@ -47,64 +47,69 @@ background: linear-gradient(to left, #5500ff 0%, #520082 100%);
   bottom: 2px;
   left: 0;
   border-radius: 50px;
-  background: #9434cb;
-}
-/* Navbarın özellikleri
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+  background: #110cff;
 }
 
-.navbar {
-  background-color: #00b46a;
+.container form .input-box{
+  width: 100%;
+  height: 45px;
+  margin-top: 25px;
+  position: relative;
+}
+
+.container form .input-box input{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 16px;
+  border: none;
+}
+
+.container form .underline:before{
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 100%;
+  background: #ccc;
+  left: 0;
+  bottom: 0;
+}
+
+.container form .underline:after{
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: rgb(42, 42, 255);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.container form .input-box input:focus ~ .underline:after,
+.container form .input-box input:valid ~ .underline:after{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.container form .button{
+  margin: 40px 0 20px 0;
+}
+
+.container form .input-box input[type="submit"]{
+  font-size: 17px;
   color: #fff;
-  padding: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  background: red;
+  transition: all 0.3s ease;
 }
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.container form .input-box input[type="submit"]:hover{
+  letter-spacing: 1px;
+  background: rgba(0,0,0,0.15);
+  color: red;
+  font-weight: bold;
+  border-radius: 10px;
 }
-
-.logo {
-  color: #fff;
-  text-decoration: none;
-  font-size: 24px;
-}
-
-.nav-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li {
-  display: inline;
-}
-
-.nav-links li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 15px;
-}
-
-.nav-links li a:hover {
-  background-color: #00a056;
-}
-
-.user-section {
-  display: flex;
-}
-
-.user-section a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 15px;
-}
-
-.user-section a:hover {
-  background-color: #00a056;
-}
-*/
