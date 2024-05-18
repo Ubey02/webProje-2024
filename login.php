@@ -1,5 +1,6 @@
 <?php
 $bildiri = ''; 
+$success = false;  
 
 if (isset($_POST['submit'])) {
     $email = $_POST['email'];
@@ -7,28 +8,42 @@ if (isset($_POST['submit'])) {
 
     if (!empty($email) && !empty($password)) {
         if ($email == 'b231210574@gmail.com' && $password == 'b231210574') {
-            $bildiri = "Hoşgeldiniz";
-            header("Location: Anasayfa.html");
-            exit;
+            $success = true; 
         } else {
             $bildiri = "Hatalı email veya şifre<br>(3 saniye içinde giriş sayfasına yönlendirileceksiniz.)";
-            header("refresh:3; url=Gırıs.html");
-            exit;
         }
     } else {
         $bildiri = "Lütfen email ve şifrenizi giriniz.";
-        header("refresh:3; url=Gırıs.html");
     }
 }
 ?>
 
-<html>
+<!DOCTYPE html>
+<html lang="tr">
+
 <head>
-    <link rel="stylesheet" href="style.css">
-    <title>Giriş</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-info text-center">
-    <h1 class="text-danger"><?= $bildiri ?></h1>
+    <?php if ($success): ?>
+        <script>
+            alert("Hoşgeldiniz");
+            window.location.href = "Anasayfa.html";
+        </script>
+    <?php else: ?>
+        <h1 class="text-danger"><?= $bildiri ?></h1>
+        <?php if ($bildiri !== ''): ?>
+            <script>
+                setTimeout(function() {
+                    window.location.href = "Gırıs.html";
+                }, 3000);
+            </script>
+        <?php endif; ?>
+    <?php endif; ?>
 </body>
+
 </html>
